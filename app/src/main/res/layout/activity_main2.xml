@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,180 +7,203 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
-    <!-- Back Button -->
     <Button
         android:id="@+id/back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="102dp"
+        android:layout_height="46dp"
+        android:text="back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="16dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
-    <!-- Title -->
+
     <TextView
         android:id="@+id/productdetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Product Details"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/back"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
 
-    <!-- Product Image -->
-    <ImageView
-        android:id="@+id/proimg"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_launcher_background"  <!-- Change to your image -->
-    app:layout_constraintTop_toBottomOf="@id/productdetail"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:layout_marginTop="16dp" />
+    <HorizontalScrollView
+        android:layout_width="172dp"
+        android:layout_height="178dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.198">
 
-    <!-- Title -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/proimg"
+                android:layout_width="162dp"
+                android:layout_height="177dp"
+                android:contentDescription="TODO"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.462"
+                tools:srcCompat="@tools:sample/avatars" />
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
     <TextView
         android:id="@+id/protitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Premium Cotton T-shirt"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/proimg"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="24dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.456" />
 
-    <!-- Price -->
     <TextView
         android:id="@+id/proprice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="$29.99"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/protitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.514" />
 
-    <!-- Size label -->
     <TextView
         android:id="@+id/prosize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select Size"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/proprice"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp" />
-
-    <!-- Size radio buttons -->
-    <RadioGroup
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/prosize"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp">
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571" />
+
+    <RadioGroup
+        android:layout_width="381dp"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="435dp"
+        tools:ignore="MissingConstraints">
 
         <RadioButton
             android:id="@+id/s"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="S" />
+
         <RadioButton
             android:id="@+id/m"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="M" />
+
         <RadioButton
             android:id="@+id/l"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="L" />
+
         <RadioButton
             android:id="@+id/xl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="XL" />
+            android:layout_weight="1"
+            android:text="Xl" />
+
     </RadioGroup>
 
-    <!-- Quantity -->
     <TextView
         android:id="@+id/quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quantity:"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/xl"
+        android:text="Quantity"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="24dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.705" />
 
-    <!-- Quantity number -->
+    <Button
+        android:id="@+id/add"
+        android:layout_width="70dp"
+        android:layout_height="44dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.786" />
+
+    <Button
+        android:id="@+id/sub"
+        android:layout_width="70dp"
+        android:layout_height="44dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.786" />
+
     <TextView
         android:id="@+id/qua"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
-        android:textSize="18sp"
-        app:layout_constraintTop_toTopOf="@id/quantity"
-        app:layout_constraintStart_toEndOf="@id/quantity"
-        android:layout_marginStart="8dp" />
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="547dp"
+        tools:ignore="MissingConstraints" />
 
-    <!-- Add (+) button -->
-    <Button
-        android:id="@+id/add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+"
-        app:layout_constraintTop_toBottomOf="@id/quantity"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="24dp" />
-
-    <!-- Sub (-) button -->
-    <Button
-        android:id="@+id/sub"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-"
-        app:layout_constraintTop_toBottomOf="@id/quantity"
-        app:layout_constraintStart_toEndOf="@id/add"
-        android:layout_marginStart="16dp" />
-
-    <!-- Description -->
     <TextView
         android:id="@+id/prodesc"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Premium quality cotton t-shirt with comfortable fit and stylish design, perfect for casual wear."
-        android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@id/add"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp" />
+        android:layout_width="332dp"
+        android:layout_height="65dp"
+        android:text="@string/premium_quality_cotton_t_shirt_with_comfortable_fit_snf_stylish_design_prefect_for_causual_wear"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="607dp"
+        tools:ignore="MissingConstraints" />
 
-    <!-- Add to Cart Button -->
     <Button
         android:id="@+id/addtocart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="245dp"
+        android:layout_height="41dp"
         android:text="Add to Cart"
-        app:layout_constraintTop_toBottomOf="@id/prodesc"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp" />
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="674dp"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
